@@ -1,0 +1,75 @@
+<ion-view title="Login">
+
+  <ion-content padding="true">
+
+<script>
+$(document).ajaxStart(function(){
+    $('#loading').show();
+ }).ajaxStop(function(){
+    $('#loading').hide();
+ });
+
+ </script>
+
+
+
+<div  align="center">
+<img src="img/icon_login.gif" class="img-responsive" style="width: 20%; height: auto;"/>
+</div>
+
+
+
+    <form id="login-form1" class="list">
+      <label class="item item-input item-stacked-label" id="login-input1">
+        <span class="input-label">E-mail</span>
+        <input type="email" placeholder="Digite seu E-mail"  name="login" ng-model="email">
+      </label>
+      <div class="spacer" style="width: 10%; height: 10%;"></div>
+      <label class="item item-input item-stacked-label" id="login-input2">
+        <span class="input-label">Senha</span>
+        <input type="password" placeholder="Digite sua senha" name="senha" ng-model="senha">
+      </label>
+    </form>
+
+
+
+<!-- 
+   <a ui-sref="serviOs" id="login-button1" class="button button-dark  button-block">Login</a>
+-->
+
+ <button class="button button-block button-dark" ng-click="fazerLogin(email, senha)">
+   Entrar
+</button>
+
+
+  <a class="button button-block button-outline button-dark" href="#/cadastro">
+   Cadastrar-se
+  </a>
+
+
+
+
+<!--
+    <button ui-sref="cadastreSe" id="login-button2" class="button button-light  button-block button-outline button-stable">Cadastre-se</button>
+-->
+
+<div id="loading" align="center">
+<img src="img/carregando.gif" class="img-responsive" style="width: 20%; height: auto;"/>
+
+<br /><br /><br />
+
+     <span align="center"> Bem vindo </span>
+
+</div>
+
+
+
+  </ion-content>
+
+
+<div class="bar bar-footer bar-dark">
+     <span align="center"> 1.0 v </span>
+   
+</div>
+
+</ion-view>
